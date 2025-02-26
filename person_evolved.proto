@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package test;
+
+message PersonEvolved {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+  repeated PhoneNumber phones = 4;
+  repeated Address addresses = 5;
+  map<string, string> metadata = 6;
+  string additional_field = 7; // New field
+  int32 priority = 8; // New field
+
+  message PhoneNumber {
+    string number = 1;
+    PhoneType type = 2;
+    bool is_primary = 3; // New field
+  }
+
+  enum PhoneType {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+    OTHER = 3; // New enum value
+  }
+  
+  message Address {
+    string street = 1;
+    string city = 2;
+    string state = 3;
+    string zip = 4;
+    string country = 5;
+    string additional_info = 6; // New field
+  }
+}
