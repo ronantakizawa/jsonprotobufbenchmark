@@ -1,8 +1,7 @@
 syntax = "proto3";
+package test_evolved;  // Changed from test to test_evolved
 
-package test;
-
-message PersonEvolved {
+message Person {
   string name = 1;
   int32 id = 2;
   string email = 3;

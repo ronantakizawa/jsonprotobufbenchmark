@@ -1,0 +1,31 @@
+# Rust build artifacts
+/target
+/src/generated
+**/*.rs.bk
+Cargo.lock
+
+# Generated protocol buffer files
+*.pb.rs
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Benchmark results and local files
+/results
+/logs
+*.log
+*.csv
+*.json
+*.bin
+
+# Dependencies
+/.cargo
+/.rustup
+
+# Environment variables
+.env
+.env.local
